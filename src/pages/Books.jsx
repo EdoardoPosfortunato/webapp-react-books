@@ -17,7 +17,7 @@ const Books = () => {
         <>
             <main>
                 <section className="container py-5">
-                    <h1 className="text-center">Books Page</h1>
+                    <h1 className="text-center mb-5">Books Page</h1>
                     <div className="row row-cols-2 row-cols-md-3 g-4">
                         {books.map((curBook, index) => (
                             <div key={index} className="col">

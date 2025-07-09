@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import GuestLayout from './layout/guestLayout'
 import Home from './pages/Home'
 import Books from './pages/Books'
+import SingleBook from './pages/SinglePage'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route element={<GuestLayout />}>
             <Route path='/' element={<Home />}></Route>
             <Route path='/books' element={<Books />}></Route>
+            <Route path='/books/:id' element={<SingleBook />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
