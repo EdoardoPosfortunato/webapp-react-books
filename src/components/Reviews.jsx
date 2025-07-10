@@ -11,7 +11,7 @@ const ReviewsList = ( {reviews}) => {
         ) : (
             <div className="row row-cols-1 gap-2">
                 {reviews.map((curReview) => (
-                    <div className="col my-2" key={reviews.id}>
+                    <div className="col my-2" key={curReview.id}>
                         <ReviewsCard review={curReview} />
                     </div>
                 ))}

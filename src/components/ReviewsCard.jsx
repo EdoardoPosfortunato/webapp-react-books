@@ -1,3 +1,5 @@
+import Stars from "./Stars";
+
 const ReviewsCard = ( {review} ) => {
 
     const { name, vote, text, created_at } = review
@@ -10,12 +12,10 @@ const ReviewsCard = ( {review} ) => {
                 </div>
                 <div className="card-body">
                     <figure>
-                        <blockquote className="blockquote">
-                            <p>Voto: {vote}</p>
-                        </blockquote>
-                        <figcaption className="blockquote-footer">
+                        <figcaption className="blockquote-footer mt-4">
                             {text} <cite title="Source Title">{created_at}</cite>
                         </figcaption>
+                            <Stars vote = {vote}/>
                     </figure>
                 </div>
             </div>

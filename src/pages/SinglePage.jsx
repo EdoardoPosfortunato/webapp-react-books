@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import ReviewsCard from "../components/ReviewsCard";
 import BackBtn from "../components/BackBtn";
+import Stars from "../components/Stars";
 
 const SingleBook = () => {
 
@@ -14,7 +15,7 @@ const SingleBook = () => {
     useEffect(() => {
         axios.get(`http://localhost:3000/books/${id}`).then((resp) => {
             setBook(resp.data.data)
-            console.log(resp.data.data.reviews)
+            console.log(resp.data.data)
         })
     }, [])
 
@@ -34,6 +35,11 @@ const SingleBook = () => {
                         <BackBtn />
                         <section>
                             <h1 className="text-center my-4">{book.title}</h1>
+                            <div className="text-center my-2">
+                                <Stars
+                                    vote={book.vote_avg}
+                                />
+                            </div>
                             <h4 className="text-center">{book.author}</h4>
                             <p className="text-center">{book.abstract}</p>
                         </section>
