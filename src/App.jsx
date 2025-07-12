@@ -25,7 +25,7 @@ function App() {
           <Route element={<GuestLayout />}>
             <Route path='/' element={<Home />}></Route>
             <Route path='/books' element={<Books />}></Route>
-            <Route path='/books/:id' element={<SingleBook />}></Route>
+            <Route path='/books/:slug' element={<SingleBook />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
