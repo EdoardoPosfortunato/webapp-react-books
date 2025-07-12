@@ -17,6 +17,11 @@ const SingleBook = () => {
             setBook(resp.data.data)
             console.log(resp.data.data)
         })
+        .catch((err) => {
+            if(err.status === 404) {
+                navigate("/not-found")
+            }
+        })
     }, [])
 
 

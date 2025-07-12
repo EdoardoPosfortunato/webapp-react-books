@@ -6,6 +6,7 @@ import GuestLayout from './layout/guestLayout'
 import Home from './pages/Home'
 import Books from './pages/Books'
 import SingleBook from './pages/SinglePage'
+import NotFound from './pages/NotFound'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path='/' element={<Home />}></Route>
             <Route path='/books' element={<Books />}></Route>
             <Route path='/books/:slug' element={<SingleBook />}></Route>
+            <Route path='*' element={<NotFound/>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
